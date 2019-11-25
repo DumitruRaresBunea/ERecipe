@@ -7,7 +7,8 @@ namespace ERecipe.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public ICollection<Receipe> Receipes { get; set; }
+        public virtual ICollection<RecipeCategory> RecipeCategories { get; set; }
+
 
     }
 }

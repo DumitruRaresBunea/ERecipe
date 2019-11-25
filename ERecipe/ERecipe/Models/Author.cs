@@ -17,6 +17,7 @@ namespace ERecipe.Models
 
         public string PhoneNumber { get; set; }
 
-        public ICollection<Receipe > Receipes { get; set; }
+        public virtual ICollection<RecipeAuthor> RecipeAuthors { get; set; }
+
     }
 }

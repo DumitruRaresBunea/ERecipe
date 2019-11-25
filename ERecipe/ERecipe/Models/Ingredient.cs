@@ -10,7 +10,8 @@ namespace ERecipe.Models
 
         public double Quantity { get; set; }
 
-        public ICollection<Receipe> Receipes { get; set; }
+        public virtual ICollection<RecipeIngredient> RecipeIngredients { get; set; }
+
 
     }
 }

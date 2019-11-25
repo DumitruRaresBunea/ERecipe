@@ -15,6 +15,7 @@ namespace ERecipe.Models
 
         public int Rating { get; set; }
 
-        public Reviewer Reviewer { get; set; }
+        public virtual Reviewer Reviewer { get; set; }
+        public virtual Recipe ReviewdRecipe { get; set; }
     }
 }

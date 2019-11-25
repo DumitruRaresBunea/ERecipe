@@ -9,6 +9,6 @@ namespace ERecipe.Models
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
-        public ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }
