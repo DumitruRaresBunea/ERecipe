@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_e_recipe_1_1_models_1_1_recipe" kind="class" language="C#" prot="public">
+    <compoundname>ERecipe::Models::Recipe</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_1a642f98a606927178298a39474cd3dca2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.Recipe.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Recipe.cs" line="8" column="20" bodyfile="Recipe.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_1a4b31c6a07914f7addf180c038a58032c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Recipe.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Recipe.cs" line="10" column="23" bodyfile="Recipe.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_1a8c3455cde3cb5107a68ed935bdc79f61" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime ERecipe.Models.Recipe.PublishDate</definition>
+        <argsstring></argsstring>
+        <name>PublishDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Recipe.cs" line="12" column="25" bodyfile="Recipe.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_1abf2b412652b8e7e60a3c40c6af835e45" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_e_recipe_1_1_models_1_1_author" kindref="compound">Author</ref></type>
+        <definition>virtual Author ERecipe.Models.Recipe.Author</definition>
+        <argsstring></argsstring>
+        <name>Author</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Recipe.cs" line="14" column="31" bodyfile="Recipe.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_1a91b88703062902721e3548831c4777ab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_e_recipe_1_1_models_1_1_recipe_category" kindref="compound">RecipeCategory</ref> &gt;</type>
+        <definition>virtual ICollection&lt;RecipeCategory&gt; ERecipe.Models.Recipe.RecipeCategories</definition>
+        <argsstring></argsstring>
+        <name>RecipeCategories</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Recipe.cs" line="16" column="36" bodyfile="Recipe.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_1a06596ef8ee8a1795c7f159d3f56fdc18" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_e_recipe_1_1_models_1_1_recipe_ingredient" kindref="compound">RecipeIngredient</ref> &gt;</type>
+        <definition>virtual ICollection&lt;RecipeIngredient&gt; ERecipe.Models.Recipe.RecipeIngredients</definition>
+        <argsstring></argsstring>
+        <name>RecipeIngredients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Recipe.cs" line="18" column="36" bodyfile="Recipe.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_1a740eca7978f3d148bb4abf66b5817256" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_e_recipe_1_1_models_1_1_recipe_author" kindref="compound">RecipeAuthor</ref> &gt;</type>
+        <definition>virtual ICollection&lt;RecipeAuthor&gt; ERecipe.Models.Recipe.RecipeAuthors</definition>
+        <argsstring></argsstring>
+        <name>RecipeAuthors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Recipe.cs" line="20" column="36" bodyfile="Recipe.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Recipe.cs" line="7" column="1" bodyfile="Recipe.cs" bodystart="6" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_1abf2b412652b8e7e60a3c40c6af835e45" prot="public" virt="non-virtual"><scope>ERecipe::Models::Recipe</scope><name>Author</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_1a4b31c6a07914f7addf180c038a58032c" prot="public" virt="non-virtual"><scope>ERecipe::Models::Recipe</scope><name>Description</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_1a642f98a606927178298a39474cd3dca2" prot="public" virt="non-virtual"><scope>ERecipe::Models::Recipe</scope><name>Id</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_1a8c3455cde3cb5107a68ed935bdc79f61" prot="public" virt="non-virtual"><scope>ERecipe::Models::Recipe</scope><name>PublishDate</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_1a740eca7978f3d148bb4abf66b5817256" prot="public" virt="non-virtual"><scope>ERecipe::Models::Recipe</scope><name>RecipeAuthors</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_1a91b88703062902721e3548831c4777ab" prot="public" virt="non-virtual"><scope>ERecipe::Models::Recipe</scope><name>RecipeCategories</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_1a06596ef8ee8a1795c7f159d3f56fdc18" prot="public" virt="non-virtual"><scope>ERecipe::Models::Recipe</scope><name>RecipeIngredients</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

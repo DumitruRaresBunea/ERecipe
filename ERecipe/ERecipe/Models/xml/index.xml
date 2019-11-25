@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="class_e_recipe_1_1_models_1_1_author" kind="class"><name>ERecipe::Models::Author</name>
+    <member refid="class_e_recipe_1_1_models_1_1_author_1ac1987aa6c07b1d72f4e3dc3c9faca1fc" kind="property"><name>Id</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_author_1a92aecc3296edc4d99b610d536e15f0a0" kind="property"><name>FirstName</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_author_1a3938b2d2e71f35fb81614665635e19f1" kind="property"><name>LastName</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_author_1a8e6f07349ffcc02a12f925ef2adacb41" kind="property"><name>Email</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_author_1a83d77fbc30dd88e023f755f31acaf2a2" kind="property"><name>PhoneNumber</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_author_1ad06660bcffc2bdbbd59c9950cd67609f" kind="property"><name>RecipeAuthors</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_category" kind="class"><name>ERecipe::Models::Category</name>
+    <member refid="class_e_recipe_1_1_models_1_1_category_1a7c46461bbb73fe774246c27b4b06991f" kind="property"><name>Id</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_category_1a3ad27cfc4dbdde3a7b759fd6ab840806" kind="property"><name>Name</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_category_1a08bbd3254876260aff4e850189afa895" kind="property"><name>RecipeCategories</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_ingredient" kind="class"><name>ERecipe::Models::Ingredient</name>
+    <member refid="class_e_recipe_1_1_models_1_1_ingredient_1afa4591b08f8903e86820003f4fe6f746" kind="property"><name>Id</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_ingredient_1a0da2b99130238b1c7c41bbc545b0ef86" kind="property"><name>Name</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_ingredient_1a2d416d8445f4e7c809e7d2259a1d90e8" kind="property"><name>Quantity</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_ingredient_1a5d656fc14926c1193856420369cb2309" kind="property"><name>RecipeIngredients</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_recipe" kind="class"><name>ERecipe::Models::Recipe</name>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_1a642f98a606927178298a39474cd3dca2" kind="property"><name>Id</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_1a4b31c6a07914f7addf180c038a58032c" kind="property"><name>Description</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_1a8c3455cde3cb5107a68ed935bdc79f61" kind="property"><name>PublishDate</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_1abf2b412652b8e7e60a3c40c6af835e45" kind="property"><name>Author</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_1a91b88703062902721e3548831c4777ab" kind="property"><name>RecipeCategories</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_1a06596ef8ee8a1795c7f159d3f56fdc18" kind="property"><name>RecipeIngredients</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_1a740eca7978f3d148bb4abf66b5817256" kind="property"><name>RecipeAuthors</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_recipe_author" kind="class"><name>ERecipe::Models::RecipeAuthor</name>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_author_1afe0171bdb85dbbd905dc397ec4dc1ea0" kind="property"><name>RecipeId</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_author_1a80bc695b0eb23853eb023a1bfbf03fc0" kind="property"><name>Recipe</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_author_1a3fa21deec63b3e90bc56ab6ce0c3f91a" kind="property"><name>AuthorID</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_author_1ad926a9571e86a12ebc1d4d7987c6728b" kind="property"><name>Author</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_recipe_category" kind="class"><name>ERecipe::Models::RecipeCategory</name>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1a19614e255de11c56e9bb5653fbe9d9b4" kind="property"><name>RecipeId</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1ab86e0b67d382bc391d6ebaed1e5cfa16" kind="property"><name>Recipe</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1a3e91fdd7037e7200abbc445543439a6a" kind="property"><name>CategoryId</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1ad62412621a5fc465b3f61d8267854fec" kind="property"><name>Category</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_recipe_ingredient" kind="class"><name>ERecipe::Models::RecipeIngredient</name>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a62df71035add787e787ee9214eb03e11" kind="property"><name>RecipeId</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a6f09d3673d4c9fc955823e1a70362e17" kind="property"><name>Recipe</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1afd90eee986f8305e2199cc838834b08e" kind="property"><name>IngredientId</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a7a74eabd2c15fda2b243c637c48df749" kind="property"><name>Ingredient</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1aac5a22d3bc1f897984fcc710a51b73f9" kind="property"><name>RecipeIngredients</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_review" kind="class"><name>ERecipe::Models::Review</name>
+    <member refid="class_e_recipe_1_1_models_1_1_review_1a9fe42d7156bb1703bacb7464ad176f4e" kind="property"><name>Id</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_review_1a5ccb11b8dfa8df157891db01c82ebc0d" kind="property"><name>ReviewText</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_review_1a0f5d3ba873cb6ccd90bf412cca149d4c" kind="property"><name>Headline</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_review_1af0e3b5858abea9853b4e028e54182137" kind="property"><name>Rating</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_review_1aaf2ac81fbea381390f6e413d9d3c151d" kind="property"><name>Reviewer</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_review_1a041315b3b5cebf88ac49ff7399cfa5a8" kind="property"><name>ReviewdRecipe</name></member>
+  </compound>
+  <compound refid="class_e_recipe_1_1_models_1_1_reviewer" kind="class"><name>ERecipe::Models::Reviewer</name>
+    <member refid="class_e_recipe_1_1_models_1_1_reviewer_1a00a3b772ea9cdce8517dc1c93c65d391" kind="property"><name>Id</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_reviewer_1ad59f5204fd363b134071b32158b85de6" kind="property"><name>FirstName</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_reviewer_1a48c6f00beb2b934a340ee5049e799a97" kind="property"><name>LastName</name></member>
+    <member refid="class_e_recipe_1_1_models_1_1_reviewer_1a76c8d11b98b2c6cb883e0648858cf3b1" kind="property"><name>Reviews</name></member>
+  </compound>
+  <compound refid="namespace_e_recipe" kind="namespace"><name>ERecipe</name>
+  </compound>
+  <compound refid="namespace_e_recipe_1_1_models" kind="namespace"><name>ERecipe::Models</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="_author_8cs" kind="file"><name>Author.cs</name>
+  </compound>
+  <compound refid="_category_8cs" kind="file"><name>Category.cs</name>
+  </compound>
+  <compound refid="_ingredient_8cs" kind="file"><name>Ingredient.cs</name>
+  </compound>
+  <compound refid="_recipe_8cs" kind="file"><name>Recipe.cs</name>
+  </compound>
+  <compound refid="_recipe_author_8cs" kind="file"><name>RecipeAuthor.cs</name>
+  </compound>
+  <compound refid="_recipe_category_8cs" kind="file"><name>RecipeCategory.cs</name>
+  </compound>
+  <compound refid="_recipe_ingredient_8cs" kind="file"><name>RecipeIngredient.cs</name>
+  </compound>
+  <compound refid="_review_8cs" kind="file"><name>Review.cs</name>
+  </compound>
+  <compound refid="_reviewer_8cs" kind="file"><name>Reviewer.cs</name>
+  </compound>
+</doxygenindex>

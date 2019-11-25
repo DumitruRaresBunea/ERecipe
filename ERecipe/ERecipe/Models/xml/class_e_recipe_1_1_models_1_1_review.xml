@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_e_recipe_1_1_models_1_1_review" kind="class" language="C#" prot="public">
+    <compoundname>ERecipe::Models::Review</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_review_1a9fe42d7156bb1703bacb7464ad176f4e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.Review.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Review.cs" line="10" column="20" bodyfile="Review.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_review_1a5ccb11b8dfa8df157891db01c82ebc0d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Review.ReviewText</definition>
+        <argsstring></argsstring>
+        <name>ReviewText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Review.cs" line="12" column="23" bodyfile="Review.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_review_1a0f5d3ba873cb6ccd90bf412cca149d4c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Review.Headline</definition>
+        <argsstring></argsstring>
+        <name>Headline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Review.cs" line="14" column="23" bodyfile="Review.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_review_1af0e3b5858abea9853b4e028e54182137" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.Review.Rating</definition>
+        <argsstring></argsstring>
+        <name>Rating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Review.cs" line="16" column="20" bodyfile="Review.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_review_1aaf2ac81fbea381390f6e413d9d3c151d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_e_recipe_1_1_models_1_1_reviewer" kindref="compound">Reviewer</ref></type>
+        <definition>virtual Reviewer ERecipe.Models.Review.Reviewer</definition>
+        <argsstring></argsstring>
+        <name>Reviewer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Review.cs" line="18" column="33" bodyfile="Review.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_review_1a041315b3b5cebf88ac49ff7399cfa5a8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_e_recipe_1_1_models_1_1_recipe" kindref="compound">Recipe</ref></type>
+        <definition>virtual Recipe ERecipe.Models.Review.ReviewdRecipe</definition>
+        <argsstring></argsstring>
+        <name>ReviewdRecipe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Review.cs" line="19" column="31" bodyfile="Review.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Review.cs" line="9" column="1" bodyfile="Review.cs" bodystart="8" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_e_recipe_1_1_models_1_1_review_1a0f5d3ba873cb6ccd90bf412cca149d4c" prot="public" virt="non-virtual"><scope>ERecipe::Models::Review</scope><name>Headline</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_review_1a9fe42d7156bb1703bacb7464ad176f4e" prot="public" virt="non-virtual"><scope>ERecipe::Models::Review</scope><name>Id</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_review_1af0e3b5858abea9853b4e028e54182137" prot="public" virt="non-virtual"><scope>ERecipe::Models::Review</scope><name>Rating</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_review_1a041315b3b5cebf88ac49ff7399cfa5a8" prot="public" virt="non-virtual"><scope>ERecipe::Models::Review</scope><name>ReviewdRecipe</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_review_1aaf2ac81fbea381390f6e413d9d3c151d" prot="public" virt="non-virtual"><scope>ERecipe::Models::Review</scope><name>Reviewer</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_review_1a5ccb11b8dfa8df157891db01c82ebc0d" prot="public" virt="non-virtual"><scope>ERecipe::Models::Review</scope><name>ReviewText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

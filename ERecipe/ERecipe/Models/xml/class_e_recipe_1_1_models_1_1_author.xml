@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_e_recipe_1_1_models_1_1_author" kind="class" language="C#" prot="public">
+    <compoundname>ERecipe::Models::Author</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_author_1ac1987aa6c07b1d72f4e3dc3c9faca1fc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.Author.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Author.cs" line="10" column="20" bodyfile="Author.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_author_1a92aecc3296edc4d99b610d536e15f0a0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Author.FirstName</definition>
+        <argsstring></argsstring>
+        <name>FirstName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Author.cs" line="12" column="23" bodyfile="Author.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_author_1a3938b2d2e71f35fb81614665635e19f1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Author.LastName</definition>
+        <argsstring></argsstring>
+        <name>LastName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Author.cs" line="14" column="23" bodyfile="Author.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_author_1a8e6f07349ffcc02a12f925ef2adacb41" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Author.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Author.cs" line="16" column="23" bodyfile="Author.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_author_1a83d77fbc30dd88e023f755f31acaf2a2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Author.PhoneNumber</definition>
+        <argsstring></argsstring>
+        <name>PhoneNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Author.cs" line="18" column="23" bodyfile="Author.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_author_1ad06660bcffc2bdbbd59c9950cd67609f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_e_recipe_1_1_models_1_1_recipe_author" kindref="compound">RecipeAuthor</ref> &gt;</type>
+        <definition>virtual ICollection&lt;RecipeAuthor&gt; ERecipe.Models.Author.RecipeAuthors</definition>
+        <argsstring></argsstring>
+        <name>RecipeAuthors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Author.cs" line="20" column="36" bodyfile="Author.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Author.cs" line="9" column="1" bodyfile="Author.cs" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_e_recipe_1_1_models_1_1_author_1a8e6f07349ffcc02a12f925ef2adacb41" prot="public" virt="non-virtual"><scope>ERecipe::Models::Author</scope><name>Email</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_author_1a92aecc3296edc4d99b610d536e15f0a0" prot="public" virt="non-virtual"><scope>ERecipe::Models::Author</scope><name>FirstName</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_author_1ac1987aa6c07b1d72f4e3dc3c9faca1fc" prot="public" virt="non-virtual"><scope>ERecipe::Models::Author</scope><name>Id</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_author_1a3938b2d2e71f35fb81614665635e19f1" prot="public" virt="non-virtual"><scope>ERecipe::Models::Author</scope><name>LastName</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_author_1a83d77fbc30dd88e023f755f31acaf2a2" prot="public" virt="non-virtual"><scope>ERecipe::Models::Author</scope><name>PhoneNumber</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_author_1ad06660bcffc2bdbbd59c9950cd67609f" prot="public" virt="non-virtual"><scope>ERecipe::Models::Author</scope><name>RecipeAuthors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

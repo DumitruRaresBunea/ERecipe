@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_e_recipe_1_1_models_1_1_recipe_ingredient" kind="class" language="C#" prot="public">
+    <compoundname>ERecipe::Models::RecipeIngredient</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a62df71035add787e787ee9214eb03e11" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.RecipeIngredient.RecipeId</definition>
+        <argsstring></argsstring>
+        <name>RecipeId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeIngredient.cs" line="10" column="20" bodyfile="RecipeIngredient.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a6f09d3673d4c9fc955823e1a70362e17" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_e_recipe_1_1_models_1_1_recipe" kindref="compound">Recipe</ref></type>
+        <definition>Recipe ERecipe.Models.RecipeIngredient.Recipe</definition>
+        <argsstring></argsstring>
+        <name>Recipe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeIngredient.cs" line="11" column="23" bodyfile="RecipeIngredient.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_ingredient_1afd90eee986f8305e2199cc838834b08e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.RecipeIngredient.IngredientId</definition>
+        <argsstring></argsstring>
+        <name>IngredientId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeIngredient.cs" line="13" column="20" bodyfile="RecipeIngredient.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a7a74eabd2c15fda2b243c637c48df749" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_e_recipe_1_1_models_1_1_ingredient" kindref="compound">Ingredient</ref></type>
+        <definition>Ingredient ERecipe.Models.RecipeIngredient.Ingredient</definition>
+        <argsstring></argsstring>
+        <name>Ingredient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeIngredient.cs" line="14" column="27" bodyfile="RecipeIngredient.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_ingredient_1aac5a22d3bc1f897984fcc710a51b73f9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_e_recipe_1_1_models_1_1_recipe_ingredient" kindref="compound">RecipeIngredient</ref> &gt;</type>
+        <definition>virtual ICollection&lt;RecipeIngredient&gt; ERecipe.Models.RecipeIngredient.RecipeIngredients</definition>
+        <argsstring></argsstring>
+        <name>RecipeIngredients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeIngredient.cs" line="16" column="36" bodyfile="RecipeIngredient.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="RecipeIngredient.cs" line="9" column="1" bodyfile="RecipeIngredient.cs" bodystart="8" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a7a74eabd2c15fda2b243c637c48df749" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeIngredient</scope><name>Ingredient</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1afd90eee986f8305e2199cc838834b08e" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeIngredient</scope><name>IngredientId</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a6f09d3673d4c9fc955823e1a70362e17" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeIngredient</scope><name>Recipe</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1a62df71035add787e787ee9214eb03e11" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeIngredient</scope><name>RecipeId</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_ingredient_1aac5a22d3bc1f897984fcc710a51b73f9" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeIngredient</scope><name>RecipeIngredients</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

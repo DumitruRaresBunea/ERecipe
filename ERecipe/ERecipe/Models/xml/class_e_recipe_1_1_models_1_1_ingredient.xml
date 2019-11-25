@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_e_recipe_1_1_models_1_1_ingredient" kind="class" language="C#" prot="public">
+    <compoundname>ERecipe::Models::Ingredient</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_ingredient_1afa4591b08f8903e86820003f4fe6f746" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.Ingredient.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ingredient.cs" line="7" column="20" bodyfile="Ingredient.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_ingredient_1a0da2b99130238b1c7c41bbc545b0ef86" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ERecipe.Models.Ingredient.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ingredient.cs" line="9" column="23" bodyfile="Ingredient.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_ingredient_1a2d416d8445f4e7c809e7d2259a1d90e8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double ERecipe.Models.Ingredient.Quantity</definition>
+        <argsstring></argsstring>
+        <name>Quantity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ingredient.cs" line="11" column="23" bodyfile="Ingredient.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_ingredient_1a5d656fc14926c1193856420369cb2309" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_e_recipe_1_1_models_1_1_recipe_ingredient" kindref="compound">RecipeIngredient</ref> &gt;</type>
+        <definition>virtual ICollection&lt;RecipeIngredient&gt; ERecipe.Models.Ingredient.RecipeIngredients</definition>
+        <argsstring></argsstring>
+        <name>RecipeIngredients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Ingredient.cs" line="13" column="36" bodyfile="Ingredient.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Ingredient.cs" line="6" column="1" bodyfile="Ingredient.cs" bodystart="5" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_e_recipe_1_1_models_1_1_ingredient_1afa4591b08f8903e86820003f4fe6f746" prot="public" virt="non-virtual"><scope>ERecipe::Models::Ingredient</scope><name>Id</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_ingredient_1a0da2b99130238b1c7c41bbc545b0ef86" prot="public" virt="non-virtual"><scope>ERecipe::Models::Ingredient</scope><name>Name</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_ingredient_1a2d416d8445f4e7c809e7d2259a1d90e8" prot="public" virt="non-virtual"><scope>ERecipe::Models::Ingredient</scope><name>Quantity</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_ingredient_1a5d656fc14926c1193856420369cb2309" prot="public" virt="non-virtual"><scope>ERecipe::Models::Ingredient</scope><name>RecipeIngredients</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

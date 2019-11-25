@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="namespace_e_recipe_1_1_models" kind="namespace" language="C#">
+    <compoundname>ERecipe::Models</compoundname>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_author" prot="public">ERecipe::Models::Author</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_category" prot="public">ERecipe::Models::Category</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_ingredient" prot="public">ERecipe::Models::Ingredient</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_recipe" prot="public">ERecipe::Models::Recipe</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_recipe_author" prot="public">ERecipe::Models::RecipeAuthor</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_recipe_category" prot="public">ERecipe::Models::RecipeCategory</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_recipe_ingredient" prot="public">ERecipe::Models::RecipeIngredient</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_review" prot="public">ERecipe::Models::Review</innerclass>
+    <innerclass refid="class_e_recipe_1_1_models_1_1_reviewer" prot="public">ERecipe::Models::Reviewer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Author.cs" line="7" column="1"/>
+  </compounddef>
+</doxygen>

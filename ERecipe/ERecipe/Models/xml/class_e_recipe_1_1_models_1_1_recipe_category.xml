@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_e_recipe_1_1_models_1_1_recipe_category" kind="class" language="C#" prot="public">
+    <compoundname>ERecipe::Models::RecipeCategory</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_category_1a19614e255de11c56e9bb5653fbe9d9b4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.RecipeCategory.RecipeId</definition>
+        <argsstring></argsstring>
+        <name>RecipeId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeCategory.cs" line="10" column="20" bodyfile="RecipeCategory.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_category_1ab86e0b67d382bc391d6ebaed1e5cfa16" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_e_recipe_1_1_models_1_1_recipe" kindref="compound">Recipe</ref></type>
+        <definition>Recipe ERecipe.Models.RecipeCategory.Recipe</definition>
+        <argsstring></argsstring>
+        <name>Recipe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeCategory.cs" line="11" column="23" bodyfile="RecipeCategory.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_category_1a3e91fdd7037e7200abbc445543439a6a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ERecipe.Models.RecipeCategory.CategoryId</definition>
+        <argsstring></argsstring>
+        <name>CategoryId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeCategory.cs" line="13" column="20" bodyfile="RecipeCategory.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_e_recipe_1_1_models_1_1_recipe_category_1ad62412621a5fc465b3f61d8267854fec" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_e_recipe_1_1_models_1_1_category" kindref="compound">Category</ref></type>
+        <definition>Category ERecipe.Models.RecipeCategory.Category</definition>
+        <argsstring></argsstring>
+        <name>Category</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecipeCategory.cs" line="14" column="25" bodyfile="RecipeCategory.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="RecipeCategory.cs" line="9" column="1" bodyfile="RecipeCategory.cs" bodystart="8" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1ad62412621a5fc465b3f61d8267854fec" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeCategory</scope><name>Category</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1a3e91fdd7037e7200abbc445543439a6a" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeCategory</scope><name>CategoryId</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1ab86e0b67d382bc391d6ebaed1e5cfa16" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeCategory</scope><name>Recipe</name></member>
+      <member refid="class_e_recipe_1_1_models_1_1_recipe_category_1a19614e255de11c56e9bb5653fbe9d9b4" prot="public" virt="non-virtual"><scope>ERecipe::Models::RecipeCategory</scope><name>RecipeId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
