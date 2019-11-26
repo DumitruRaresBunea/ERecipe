@@ -16,6 +16,6 @@ namespace ERecipe.Repositories
 
         ICollection<Recipe> GetRecipesFromCountry(int countryId);
 
-        bool CheckIfExists(int countryId);
+        bool CountryExists(int countryId);
     }
 }

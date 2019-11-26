@@ -16,7 +16,7 @@ namespace ERecipe.Repositories
             _countryContext = countryContext;
         }
 
-        public bool CheckIfExists(int countryId)
+        public bool CountryExists(int countryId)
         {
             return _countryContext.Countries.Any(c =>c.Id==countryId);
         }

@@ -21,7 +21,7 @@ namespace ERecipe.Controllers
         [HttpGet]
         [ProducesResponseType(400)]
         [ProducesResponseType(200, Type = typeof(IEnumerable<CountryDTO>))]
-        public IActionResult GetCountires()
+        public IActionResult GetCountries()
         {
             var countries = _countryRepository.GetCountries().ToList();
 
@@ -39,5 +39,56 @@ namespace ERecipe.Controllers
             }
             return Ok(countriesDto);
         }
+
+        //api/countries/countryId
+        [HttpGet("{countryId}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200, Type = typeof(CountryDTO))]
+        public IActionResult GetCountry(int countryId)
+        {
+            if (!_countryRepository.CountryExists(countryId))
+                return NotFound();
+
+            var country = _countryRepository.GetCountry(countryId);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var countryDto = new CountryDTO()
+            {
+                Id = country.Id,
+                Name = country.Name
+            };
+
+            return Ok(countryDto);
+        }
+
+        //api/countries/recipes/recipeId
+        [HttpGet("recipes/{recipeId}")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200, Type = typeof(CountryDTO))]
+        public IActionResult GetCountryOfRecipe(int recipeId)
+        {
+            //TO DD -validate if autho exists
+
+            var country = _countryRepository.GetCountryOfARecipe(recipeId);
+
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var countryDto = new CountryDTO()
+            {
+                Id = country.Id,
+                Name = country.Name
+            };
+
+            return Ok(countryDto);
+        }
+
+
+        //To Do get recipe from country
     }
 }
