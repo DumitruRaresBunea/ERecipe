@@ -20,6 +20,7 @@ namespace ERecipe.Services
         public virtual DbSet<RecipeCategory> RecipeCategories { get; set; }
         public virtual DbSet<RecipeIngredient> RecipeIngredients { get; set; }
         public virtual DbSet<Step> Steps { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

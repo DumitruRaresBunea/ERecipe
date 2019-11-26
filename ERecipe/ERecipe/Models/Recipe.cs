@@ -19,7 +19,7 @@ namespace ERecipe.Models
 
         public DateTime PublishDate { get; set; } = DateTime.Now;
 
-        public Country Country { get; set; }
+        public virtual Country Country { get; set; }
 
         public virtual ICollection<Step> Steps { get; set; }
 
