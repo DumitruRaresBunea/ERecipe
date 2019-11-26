@@ -31,7 +31,7 @@ namespace ERecipe
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RecipeDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -40,13 +40,7 @@ namespace ERecipe
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            context.SeedDataContext();
 
             app.UseEndpoints(endpoints => {
      endpoints.MapControllers();

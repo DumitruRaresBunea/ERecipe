@@ -5,7 +5,7 @@ namespace ERecipe.Services
 {
     public class RecipeDbContext : DbContext
     {
-        public RecipeDbContext(DbContextOptions<DbContext> options)
+        public RecipeDbContext(DbContextOptions<RecipeDbContext> options)
             : base(options)
         {
         }
@@ -19,6 +19,7 @@ namespace ERecipe.Services
         public virtual DbSet<RecipeAuthor> RecipeAuthors { get; set; }
         public virtual DbSet<RecipeCategory> RecipeCategories { get; set; }
         public virtual DbSet<RecipeIngredient> RecipeIngredients { get; set; }
+        public virtual DbSet<Step> Steps { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
