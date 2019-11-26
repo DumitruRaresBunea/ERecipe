@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ERecipe.DTO;
 using ERecipe.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ERecipe.Controllers
 {
@@ -17,12 +16,28 @@ namespace ERecipe.Controllers
         {
             _countryRepository = countryRepository;
         }
+
         //api/countries
-        [HttpGet]        
+        [HttpGet]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<CountryDTO>))]
         public IActionResult GetCountires()
         {
             var countries = _countryRepository.GetCountries().ToList();
-            return Ok(countries);
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var countriesDto = new List<CountryDTO>();
+            foreach (var country in countries)
+            {
+                countriesDto.Add(new CountryDTO
+                {
+                    Id = country.Id,
+                    Name = country.Name
+                });
+            }
+            return Ok(countriesDto);
         }
     }
 }
