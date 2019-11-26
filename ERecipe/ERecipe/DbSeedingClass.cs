@@ -102,6 +102,9 @@ namespace ERecipe
                     }
                 }
             };
+
+            context.RecipeAuthors.AddRange(recipeAuthors);
+            context.SaveChanges();
         }
     }
 }
