@@ -7,11 +7,11 @@ using ERecipe.Services;
 
 namespace ERecipe.Repositories
 {
-    public class CountryRepository : ICountryRepository
+    public class CountriesRepository : ICountryRepository
     {
         private RecipeDbContext _countryContext;
 
-        public CountryRepository(RecipeDbContext countryContext)
+        public CountriesRepository(RecipeDbContext countryContext)
         {
             _countryContext = countryContext;
         }

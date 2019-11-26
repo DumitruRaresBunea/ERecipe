@@ -1,3 +1,4 @@
+using ERecipe.Repositories;
 using ERecipe.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,6 +26,8 @@ namespace ERecipe
 
             var connectionString = Configuration["connectionStrings:recipeDbConnectionString"];
             services.AddDbContext<RecipeDbContext>(c => c.UseSqlServer(connectionString));
+
+            services.AddScoped<ICountryRepository, CountriesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
