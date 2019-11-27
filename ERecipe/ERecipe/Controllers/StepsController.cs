@@ -73,7 +73,7 @@ namespace ERecipe.Controllers
         [ProducesResponseType(404)]
         [ProducesResponseType(400)]
         [ProducesResponseType(200, Type = typeof(IEnumerable<StepDto>))]
-        public IActionResult GetIngredientssOFRecipe(int recipeId)
+        public IActionResult GetStepsOFRecipe(int recipeId)
         {
             if (!_recipeRepository.RecipeExists(recipeId))
                 return NotFound();
@@ -102,7 +102,7 @@ namespace ERecipe.Controllers
         [ProducesResponseType(404)]
         [ProducesResponseType(400)]
         [ProducesResponseType(200, Type = typeof(StepDto))]
-        public IActionResult GetRecipeFromIngredient(int stepId)
+        public IActionResult GetRecipeFromStep(int stepId)
         {
             if (!_stepRepository.StepExists(stepId))
                 return NotFound();

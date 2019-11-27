@@ -1,8 +1,10 @@
 ﻿using ERecipe.DTO;
+using ERecipe.Models;
 using ERecipe.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ERecipe.Controllers
 {
@@ -12,7 +14,6 @@ namespace ERecipe.Controllers
     {
         private ICountryRepository _countryRepository;
         private IRecipeRepository _recipeRepository;
-
 
         public CountriesController(ICountryRepository countryRepository, IRecipeRepository recipeRepository)
         {
@@ -44,7 +45,7 @@ namespace ERecipe.Controllers
         }
 
         //api/countries/countryId
-        [HttpGet("{countryId}")]
+        [HttpGet("{countryId}", Name = "GetCountry")]
         [ProducesResponseType(404)]
         [ProducesResponseType(400)]
         [ProducesResponseType(200, Type = typeof(CountryDTO))]
@@ -122,6 +123,39 @@ namespace ERecipe.Controllers
             }
 
             return Ok(recipesDto);
+        }
+
+         //api/countries
+        [HttpPost]
+        [ProducesResponseType(201, Type = typeof(Country))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(422)]
+        [ProducesResponseType(500)]
+        public IActionResult CreateCountry([FromBody]Country countryToCreate)
+        {
+            if (countryToCreate == null)
+                return BadRequest(ModelState);
+
+            var country = _countryRepository.GetCountries()
+                            .Where(c => c.Name.Trim().ToUpper() == countryToCreate.Name.Trim().ToUpper())
+                            .FirstOrDefault();
+
+            if (country != null)
+            {
+                ModelState.AddModelError("", $"Country {countryToCreate.Name} already exists");
+                return StatusCode(422, ModelState);
+            }
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if(!_countryRepository.CreateCountry(countryToCreate))
+            {
+                ModelState.AddModelError("", $"Something went wrong saving {countryToCreate.Name}");
+                return StatusCode(500, ModelState);
+            }
+
+            return CreatedAtRoute("GetCountry", new { countryId = countryToCreate.Id }, countryToCreate);
         }
     }
 }
