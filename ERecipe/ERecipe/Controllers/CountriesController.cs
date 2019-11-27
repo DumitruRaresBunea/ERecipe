@@ -75,7 +75,6 @@ namespace ERecipe.Controllers
 
             var country = _countryRepository.GetCountryOfARecipe(recipeId);
 
-
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -87,7 +86,6 @@ namespace ERecipe.Controllers
 
             return Ok(countryDto);
         }
-
 
         //To Do get recipe from country
     }

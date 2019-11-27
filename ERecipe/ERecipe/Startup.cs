@@ -28,6 +28,8 @@ namespace ERecipe
             services.AddDbContext<RecipeDbContext>(c => c.UseSqlServer(connectionString));
 
             services.AddScoped<ICountryRepository, CountriesRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,8 +1,5 @@
 ﻿using ERecipe.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ERecipe.Repositories
 {
@@ -18,5 +15,4 @@ namespace ERecipe.Repositories
 
         bool CountryExists(int categoryId);
     }
-}
 }
