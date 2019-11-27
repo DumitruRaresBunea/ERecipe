@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace ERecipe.DTO
 {
-    public class Review
+    public class Recipe
     {
         public int Id { get; set; }
-        public string ReviewTest { get; set; }
-        public string Headline { get; set; }
-        public int Rating { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime? PublishDate { get; set; }
     }
 }
