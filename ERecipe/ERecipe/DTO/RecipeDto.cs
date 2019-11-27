@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ERecipe.DTO
 {
-    public class Recipe
+    public class RecipeDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

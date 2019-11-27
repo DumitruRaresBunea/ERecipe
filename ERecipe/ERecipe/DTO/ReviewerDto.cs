@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace ERecipe.DTO
 {
-    public class Author
+    public class ReviewerDto
     {
         public int Id { get; set; }
-        public string Email { get; set; }
         public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string PhoneNumber { get; set; }
+        public string LasName { get; set; }
     }
 }
