@@ -91,6 +91,38 @@ namespace ERecipe.Controllers
             return Ok(categoriesDto);
         }
 
-        //To Do GetAllBooksForCategory
+        //api/categories/categoryId/recipes
+        [HttpGet("{categoryId}/recipes")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<RecipeDto>))]
+        public IActionResult GetAllRecipesFromACategory(int categoryId)
+        {
+            if (!_categoryRepository.CountryExists(categoryId))
+                return NotFound();
+
+            var recipes = _categoryRepository.GetRecipesOfCategory(categoryId);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var recipesDto = new List<RecipeDto>();
+
+            foreach (var recipe in recipes)
+            {
+                recipesDto.Add(new RecipeDto
+                {
+                    Id = recipe.Id,
+                    Name = recipe.Name,
+                    Description = recipe.Description,
+                    PublishDate = recipe.PublishDate
+                });
+            }
+
+            return Ok(recipesDto);
+
+        }
     }
 }

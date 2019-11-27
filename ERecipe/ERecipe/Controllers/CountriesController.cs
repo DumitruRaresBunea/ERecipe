@@ -87,6 +87,37 @@ namespace ERecipe.Controllers
             return Ok(countryDto);
         }
 
-        //To Do get recipe from country
+        //api/countries/countryId/recipes
+        [HttpGet("{countryId}/recipes")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<RecipeDto>))]
+        public IActionResult GetRecipesFromCountry(int countryId)
+        {
+            if (!_countryRepository.CountryExists(countryId))
+                return NotFound();
+
+            var recipes = _countryRepository.GetRecipesFromCountry(countryId);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var recipesDto = new List<RecipeDto>();
+
+            foreach (var recipe in recipes)
+            {
+                recipesDto.Add(new RecipeDto
+                {
+                    Id = recipe.Id,
+                    Name = recipe.Name,
+                    Description = recipe.Description,
+                    PublishDate =recipe.PublishDate
+                });
+            }
+
+            return Ok(recipesDto);
+        }
     }
 }
