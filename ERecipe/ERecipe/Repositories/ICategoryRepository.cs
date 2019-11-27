@@ -13,6 +13,8 @@ namespace ERecipe.Repositories
 
         ICollection<Recipe> GetRecipesOfCategory(int categoryId);
 
-        bool CountryExists(int categoryId);
+        bool CategoryExists(int categoryId);
+
+        bool IsDupliocateCategoryName(int categoryId, string categoryName);
     }
 }

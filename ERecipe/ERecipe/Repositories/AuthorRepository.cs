@@ -1,9 +1,7 @@
 ﻿using ERecipe.Models;
 using ERecipe.Services;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ERecipe.Repositories
 {
@@ -33,13 +31,12 @@ namespace ERecipe.Repositories
 
         public ICollection<Author> GetAuthorsOfARecipe(int recipeId)
         {
-            return _authorRepository.RecipeAuthors.Where(r => r.RecipeId == recipeId).Select(c => c.Author).ToList();
+            return _authorRepository.RecipeAuthors.Where(r => r.Recipe.Id == recipeId).Select(a => a.Author).ToList();
         }
 
         public ICollection<Recipe> GetRecipesOfAAuthor(int authorId)
-
         {
-            return _authorRepository.RecipeAuthors.Where(r => r.AuthorID == authorId).Select(c => c.Recipe).ToList();
+            return _authorRepository.RecipeAuthors.Where(a => a.Author.Id == authorId).Select(r => r.Recipe).ToList();
         }
     }
 }

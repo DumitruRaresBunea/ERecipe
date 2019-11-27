@@ -17,5 +17,7 @@ namespace ERecipe.Repositories
         ICollection<Recipe> GetRecipesFromCountry(int countryId);
 
         bool CountryExists(int countryId);
+
+        bool IsDuplicateCountryName(int countryId, string countryName);
     }
 }

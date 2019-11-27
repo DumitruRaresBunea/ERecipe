@@ -43,6 +43,12 @@ namespace ERecipe.Repositories
             return _countryContext.Recipes.Where(c => c.Id == countryId).ToList();
         }
 
+        public bool IsDuplicateCountryName(int countryId, string countryName)
+        {
+            var country = _countryContext.Countries.Where(c => c.Name.Trim().ToUpper() == countryName.Trim().ToUpper() 
+            && c.Id != countryId).FirstOrDefault();
 
+            return country == null ? false : true;
+        }
     }
 }

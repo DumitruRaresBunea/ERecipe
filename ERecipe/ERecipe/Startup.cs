@@ -29,6 +29,12 @@ namespace ERecipe
 
             services.AddScoped<ICountryRepository, CountriesRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
+            services.AddScoped<IReviewerRepository, ReviewerRepository>();
+            services.AddScoped<IReviewRepository, ReviewRepository>();
+            services.AddScoped<IStepRepository, StepRepository>();
+            services.AddScoped<IRecipeRepository, RecipeRepository>();
 
         }
 

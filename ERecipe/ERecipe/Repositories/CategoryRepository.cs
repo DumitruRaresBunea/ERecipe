@@ -14,7 +14,7 @@ namespace ERecipe.Repositories
             _categoryContext = categotyContext;
         }
 
-        public bool CountryExists(int categoryId)
+        public bool CategoryExists(int categoryId)
         {
             return _categoryContext.Categories.Any(c => c.Id == categoryId);
         }
@@ -37,6 +37,14 @@ namespace ERecipe.Repositories
         public ICollection<Recipe> GetRecipesOfCategory(int categoryId)
         {
             return _categoryContext.RecipeCategories.Where(c => c.CategoryId == categoryId).Select(r => r.Recipe).ToList();
+        }
+
+        public bool IsDupliocateCategoryName(int categoryId, string categoryName)
+        {
+            var category = _categoryContext.Categories.Where(c => c.Name.Trim().ToUpper() == categoryName.Trim().ToUpper()
+            && c.Id != categoryId).FirstOrDefault();
+
+            return category == null ? false : true;
         }
     }
 }

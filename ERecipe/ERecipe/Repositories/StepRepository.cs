@@ -1,16 +1,19 @@
-﻿using System;
+﻿using ERecipe.Models;
+using ERecipe.Services;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using ERecipe.Models;
-using ERecipe.Services;
 
 namespace ERecipe.Repositories
 {
     public class StepRepository : IStepRepository
     {
-
         private RecipeDbContext _stepContext;
+
+        public StepRepository(RecipeDbContext stepContext)
+        {
+            _stepContext = stepContext;
+        }
+
         public Recipe GetRecipeOfAStep(int stepId)
         {
             var recipeId = _stepContext.Steps.Where(s => s.Id == stepId).Select(r => r.Recipe.Id).FirstOrDefault();

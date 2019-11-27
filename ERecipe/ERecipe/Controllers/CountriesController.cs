@@ -11,10 +11,13 @@ namespace ERecipe.Controllers
     public class CountriesController : Controller
     {
         private ICountryRepository _countryRepository;
+        private IRecipeRepository _recipeRepository;
 
-        public CountriesController(ICountryRepository countryRepository)
+
+        public CountriesController(ICountryRepository countryRepository, IRecipeRepository recipeRepository)
         {
             _countryRepository = countryRepository;
+            _recipeRepository = recipeRepository;
         }
 
         //api/countries
@@ -71,7 +74,8 @@ namespace ERecipe.Controllers
         [ProducesResponseType(200, Type = typeof(CountryDTO))]
         public IActionResult GetCountryOfRecipe(int recipeId)
         {
-            //TO DD -validate if autho exists
+            if (!_recipeRepository.RecipeExists(recipeId))
+                return NotFound();
 
             var country = _countryRepository.GetCountryOfARecipe(recipeId);
 
@@ -113,7 +117,7 @@ namespace ERecipe.Controllers
                     Id = recipe.Id,
                     Name = recipe.Name,
                     Description = recipe.Description,
-                    PublishDate =recipe.PublishDate
+                    PublishDate = recipe.PublishDate
                 });
             }
 

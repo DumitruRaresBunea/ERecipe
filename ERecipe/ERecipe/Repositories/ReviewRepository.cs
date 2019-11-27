@@ -27,12 +27,12 @@ namespace ERecipe.Repositories
 
         public ICollection<Review> GetReviews()
         {
-            return _reviewContext.Reviews.OrderBy(r => r.Id).ToList();
+            return _reviewContext.Reviews.OrderBy(r => r.Rating).ToList();
         }
 
         public ICollection<Review> GetReviewsOfARecipe(int recipeId)
         {
-            return _reviewContext.Reviews.Where(r => r.Id == recipeId).ToList();
+            return _reviewContext.Reviews.Where(r => r.ReviewdRecipe.Id == recipeId).ToList();
         }
 
         public bool ReviewExists(int reviewId)

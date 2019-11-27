@@ -10,10 +10,12 @@ namespace ERecipe.Controllers
     public class CategoriesController : Controller
     {
         private ICategoryRepository _categoryRepository;
+        private IRecipeRepository _recipeRepository;
 
-        public CategoriesController(ICategoryRepository categoryRepository)
+        public CategoriesController(ICategoryRepository categoryRepository, IRecipeRepository recipeRepository)
         {
             _categoryRepository = categoryRepository;
+            _recipeRepository = recipeRepository;
         }
 
         //api/categories
@@ -46,7 +48,7 @@ namespace ERecipe.Controllers
         [ProducesResponseType(200, Type = typeof(CategoryDto))]
         public IActionResult GetCountry(int categoryId)
         {
-            if (!_categoryRepository.CountryExists(categoryId))
+            if (!_categoryRepository.CategoryExists(categoryId))
                 return NotFound();
 
             var category = _categoryRepository.GetCategory(categoryId);
@@ -68,9 +70,10 @@ namespace ERecipe.Controllers
         [ProducesResponseType(404)]
         [ProducesResponseType(400)]
         [ProducesResponseType(200, Type = typeof(IEnumerable<CategoryDto>))]
-        public IActionResult GetCountryOfRecipe(int recipeId)
+        public IActionResult GetCategoriesOFRecipe(int recipeId)
         {
-            //TO DD -validate if autho exists
+            if (!_recipeRepository.RecipeExists(recipeId))
+                return NotFound();
 
             var categories = _categoryRepository.GetAllCategoriesForRecipe(recipeId);
 
@@ -98,7 +101,7 @@ namespace ERecipe.Controllers
         [ProducesResponseType(200, Type = typeof(IEnumerable<RecipeDto>))]
         public IActionResult GetAllRecipesFromACategory(int categoryId)
         {
-            if (!_categoryRepository.CountryExists(categoryId))
+            if (!_categoryRepository.CategoryExists(categoryId))
                 return NotFound();
 
             var recipes = _categoryRepository.GetRecipesOfCategory(categoryId);

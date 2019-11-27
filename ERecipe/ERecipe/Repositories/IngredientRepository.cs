@@ -35,7 +35,7 @@ namespace ERecipe.Repositories
 
         public Recipe GetRecipeOfAIngredient(int ingredientId)
         {
-            return _ingredientContext.Recipes.Where(r => r.Id == ingredientId).FirstOrDefault();
+            return _ingredientContext.RecipeIngredients.Where(i => i.IngredientId== ingredientId).Select(r => r.Recipe).FirstOrDefault();
         }
 
         public bool IngredientExists(int ingredientId)
