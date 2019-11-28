@@ -1,0 +1,9 @@
+package model;
+
+public class Review 
+{
+	public int Id;
+	public String ReviewText;
+	public String Headline;
+	public int Rating;
+}
