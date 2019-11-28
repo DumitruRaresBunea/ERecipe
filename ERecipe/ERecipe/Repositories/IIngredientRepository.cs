@@ -13,5 +13,13 @@ namespace ERecipe.Repositories
         ICollection<Ingredient> GetIngredientsOfARecipe(int recipeId);
         Recipe GetRecipeOfAIngredient(int ingredientId);
         bool IngredientExists(int ingredientId);
+
+        bool CreateIngredient(Ingredient ingredient);
+
+        bool UpdateIngredient(Ingredient ingredient);
+
+        bool DeleteIngredient(Ingredient ingredient);
+
+        bool Save();
     }
 }

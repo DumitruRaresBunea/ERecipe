@@ -14,5 +14,13 @@ namespace ERecipe.Repositories
         Recipe GetRecipeOfAStep(int stepId);
 
         bool StepExists(int stepId);
+
+        bool CreateStep(Step step);
+
+        bool UpdateStep(Step step);
+
+        bool DeleteStep(Step step);
+
+        bool Save();
     }
 }

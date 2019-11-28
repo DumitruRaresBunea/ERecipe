@@ -50,6 +50,8 @@ namespace ERecipe
 
             context.Database.Migrate();
 
+
+            //This adds data to the database
             //context.SeedDataContext();
 
             app.UseEndpoints(endpoints =>

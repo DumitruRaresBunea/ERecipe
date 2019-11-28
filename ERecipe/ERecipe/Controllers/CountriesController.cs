@@ -4,7 +4,6 @@ using ERecipe.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ERecipe.Controllers
 {
@@ -125,7 +124,7 @@ namespace ERecipe.Controllers
             return Ok(recipesDto);
         }
 
-         //api/countries
+        //api/countries
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(Country))]
         [ProducesResponseType(400)]
@@ -149,13 +148,81 @@ namespace ERecipe.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if(!_countryRepository.CreateCountry(countryToCreate))
+            if (!_countryRepository.CreateCountry(countryToCreate))
             {
                 ModelState.AddModelError("", $"Something went wrong saving {countryToCreate.Name}");
                 return StatusCode(500, ModelState);
             }
 
             return CreatedAtRoute("GetCountry", new { countryId = countryToCreate.Id }, countryToCreate);
+        }
+
+        //api/countries/countryId
+        [HttpPut("{countryId}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(422)]
+        [ProducesResponseType(500)]
+        [ProducesResponseType(404)]
+        public IActionResult UpdateCountry(int countryId, [FromBody]Country updatedCountryInfo)
+        {
+            if (updatedCountryInfo == null)
+                return BadRequest(ModelState);
+
+            if (countryId != updatedCountryInfo.Id)
+                return BadRequest(ModelState);
+
+            if (!_countryRepository.CountryExists(countryId))
+                return NotFound();
+
+            if (_countryRepository.IsDuplicateCountryName(countryId, updatedCountryInfo.Name))
+            {
+                ModelState.AddModelError("", $"Country {updatedCountryInfo.Name} already exists");
+                return StatusCode(422, ModelState);
+            }
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (!_countryRepository.UpdateCountry(updatedCountryInfo))
+            {
+                ModelState.AddModelError("", $"Something went wrong updating {updatedCountryInfo.Name}");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
+        //api/countries/countryId
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(422)]
+        [ProducesResponseType(409)]
+        [ProducesResponseType(500)]
+        [ProducesResponseType(404)]
+        [HttpDelete("{countryId}")]
+        public IActionResult DeleteCountry (int countryId)
+        {
+            if (!_countryRepository.CountryExists(countryId))
+                return NotFound();
+
+            var countryToDelete = _countryRepository.GetCountry(countryId);
+
+            if(_countryRepository.GetRecipesFromCountry(countryId).Count>0)
+            {
+              ModelState.AddModelError("", $"Country {countryToDelete.Name} cannot be deleted because at least one recipe is linked to it");
+                return StatusCode(409, ModelState); //409 = conflict
+            }
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (!_countryRepository.DeleteCountry(countryToDelete))
+            {
+                ModelState.AddModelError("", $"Something went wrong deleting {countryToDelete.Name}");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
         }
     }
 }

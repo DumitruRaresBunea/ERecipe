@@ -13,5 +13,13 @@ namespace ERecipe.Repositories
         ICollection<Review> GetReviewsOfARecipe(int recipeId);
         Recipe GetRecipeOfAReview(int reviewId);
         bool ReviewExists(int reviewId);
+
+        bool CreateReview(Review review);
+
+        bool UpdateReview(Review review);
+
+        bool DeleteReview(Reviewer review);
+
+        bool Save();
     }
 }
