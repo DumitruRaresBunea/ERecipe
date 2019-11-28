@@ -1,9 +1,7 @@
-﻿using System;
+﻿using ERecipe.Models;
+using ERecipe.Services;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using ERecipe.Models;
-using ERecipe.Services;
 
 namespace ERecipe.Repositories
 {
@@ -31,7 +29,6 @@ namespace ERecipe.Repositories
         public Ingredient GetIngredient(int ingredientId)
         {
             return _ingredientContext.Ingredients.Where(c => c.Id == ingredientId).FirstOrDefault();
-
         }
 
         public ICollection<Ingredient> GetIngredients()
@@ -42,12 +39,11 @@ namespace ERecipe.Repositories
         public ICollection<Ingredient> GetIngredientsOfARecipe(int recipeId)
         {
             return _ingredientContext.RecipeIngredients.Where(i => i.RecipeId == recipeId).Select(r => r.Ingredient).ToList();
-
         }
 
         public Recipe GetRecipeOfAIngredient(int ingredientId)
         {
-            return _ingredientContext.RecipeIngredients.Where(i => i.IngredientId== ingredientId).Select(r => r.Recipe).FirstOrDefault();
+            return _ingredientContext.RecipeIngredients.Where(i => i.IngredientId == ingredientId).Select(r => r.Recipe).FirstOrDefault();
         }
 
         public bool IngredientExists(int ingredientId)
