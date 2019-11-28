@@ -48,6 +48,8 @@ namespace ERecipe
 
             app.UseRouting();
 
+            context.Database.Migrate();
+
             //context.SeedDataContext();
 
             app.UseEndpoints(endpoints =>
