@@ -14,6 +14,18 @@ namespace ERecipe.Repositories
             _stepContext = stepContext;
         }
 
+        public bool CreateStep(Step step)
+        {
+            _stepContext.Add(step);
+            return Save();
+        }
+
+        public bool DeleteStep(Step step)
+        {
+            _stepContext.Remove(step);
+            return Save();
+        }
+
         public Recipe GetRecipeOfAStep(int stepId)
         {
             var recipeId = _stepContext.Steps.Where(s => s.Id == stepId).Select(r => r.Recipe.Id).FirstOrDefault();
@@ -35,9 +47,21 @@ namespace ERecipe.Repositories
             return _stepContext.Steps.Where(s => s.Recipe.Id == recipeId).ToList();
         }
 
+        public bool Save()
+        {
+            var saved = _stepContext.SaveChanges();
+            return saved >= 0 ? true : false;
+        }
+
         public bool StepExists(int stepId)
         {
             return _stepContext.Steps.Any(s => s.Id == stepId);
+        }
+
+        public bool UpdateStep(Step step)
+        {
+            _stepContext.Update(step);
+            return Save();
         }
     }
 }

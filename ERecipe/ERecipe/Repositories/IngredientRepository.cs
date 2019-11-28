@@ -16,6 +16,18 @@ namespace ERecipe.Repositories
             _ingredientContext = ingredientContext;
         }
 
+        public bool CreateIngredient(Ingredient ingredient)
+        {
+            _ingredientContext.Add(ingredient);
+            return Save();
+        }
+
+        public bool DeleteIngredient(Ingredient ingredient)
+        {
+            _ingredientContext.Remove(ingredient);
+            return Save();
+        }
+
         public Ingredient GetIngredient(int ingredientId)
         {
             return _ingredientContext.Ingredients.Where(c => c.Id == ingredientId).FirstOrDefault();
@@ -41,6 +53,18 @@ namespace ERecipe.Repositories
         public bool IngredientExists(int ingredientId)
         {
             return _ingredientContext.Ingredients.Any(c => c.Id == ingredientId);
+        }
+
+        public bool Save()
+        {
+            var saved = _ingredientContext.SaveChanges();
+            return saved >= 0 ? true : false;
+        }
+
+        public bool UpdateIngredient(Ingredient ingredient)
+        {
+            _ingredientContext.Update(ingredient);
+            return Save();
         }
     }
 }

@@ -19,6 +19,18 @@ namespace ERecipe.Repositories
             return _authorRepository.Authors.Any(a => a.Id == authorId);
         }
 
+        public bool CreateAuthor(Author author)
+        {
+            _authorRepository.Add(author);
+            return Save();
+        }
+
+        public bool DeleteAuthor(Author author)
+        {
+            _authorRepository.Remove(author);
+            return Save();
+        }
+
         public Author GetAuthor(int authorId)
         {
             return _authorRepository.Authors.Where(a => a.Id == authorId).FirstOrDefault();
@@ -37,6 +49,18 @@ namespace ERecipe.Repositories
         public ICollection<Recipe> GetRecipesOfAAuthor(int authorId)
         {
             return _authorRepository.RecipeAuthors.Where(a => a.Author.Id == authorId).Select(r => r.Recipe).ToList();
+        }
+
+        public bool Save()
+        {
+            var saved = _authorRepository.SaveChanges();
+            return saved >= 0 ? true : false;
+        }
+
+        public bool UpdateAuthor(Author author)
+        {
+            _authorRepository.Update(author);
+            return Save();
         }
     }
 }
