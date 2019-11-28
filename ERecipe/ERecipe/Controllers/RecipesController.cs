@@ -42,7 +42,7 @@ namespace ERecipe.Controllers
             return Ok(recipesDto);
         }
 
-        //api/authors/recipeId
+        //api/recipes/recipeId
         [HttpGet("{recipeId}")]
         [ProducesResponseType(200, Type = typeof(RecipeDto))]
         [ProducesResponseType(400)]
@@ -68,7 +68,7 @@ namespace ERecipe.Controllers
             return Ok(recipeDto);
         }
 
-        //api/authors/recipeId/rating
+        //api/recipes/recipeId/rating
         [HttpGet("{recipeId}/rating")]
         [ProducesResponseType(200, Type = typeof(decimal))]
         [ProducesResponseType(400)]
