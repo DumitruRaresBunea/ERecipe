@@ -3,6 +3,7 @@ using ERecipe.Models;
 using ERecipe.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ERecipe.Controllers
 {
@@ -43,11 +44,11 @@ namespace ERecipe.Controllers
         }
 
         //api/categories/categoryId
-        [HttpGet("{categoryId}")]
+        [HttpGet("{categoryId}", Name = "GetCategory")]
         [ProducesResponseType(404)]
         [ProducesResponseType(400)]
         [ProducesResponseType(200, Type = typeof(CategoryDto))]
-        public IActionResult GetCountry(int categoryId)
+        public IActionResult GetCategory(int categoryId)
         {
             if (!_categoryRepository.CategoryExists(categoryId))
                 return NotFound();
@@ -179,7 +180,7 @@ namespace ERecipe.Controllers
             if (!_categoryRepository.CategoryExists(categoryId))
                 return NotFound();
 
-            if (_categoryRepository.IsDuplicateCategoryName(categoryId, updatedCategoryInfo.Name))
+            if (_categoryRepository.IsDupliocateCategoryName(categoryId, updatedCategoryInfo.Name))
             {
                 ModelState.AddModelError("", $"Category {updatedCategoryInfo.Name} already exists");
                 return StatusCode(422, ModelState);
@@ -211,10 +212,10 @@ namespace ERecipe.Controllers
 
             var categoryToDelete = _categoryRepository.GetCategory(categoryId);
 
-            if (_categoryRepository.GetAllBooksForCategory(categoryId).Count() > 0)
+            if (_categoryRepository.GetRecipesOfCategory(categoryId).Count() > 0)
             {
                 ModelState.AddModelError("", $"Category {categoryToDelete.Name} " +
-                                              "cannot be deleted because it is used by at least one book");
+                                              "cannot be deleted because it is used by at least one recipe");
                 return StatusCode(409, ModelState);
             }
 

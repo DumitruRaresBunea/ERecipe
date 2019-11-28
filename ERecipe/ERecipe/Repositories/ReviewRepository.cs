@@ -20,9 +20,15 @@ namespace ERecipe.Repositories
             return Save();
         }
 
-        public bool DeleteReview(Reviewer review)
+        public bool DeleteReview(Review review)
         {
             _reviewContext.Remove(review);
+            return Save();
+        }
+
+        public bool DeleteReviews(List<Review> reviews)
+        {
+            _reviewContext.RemoveRange(reviews);
             return Save();
         }
 
