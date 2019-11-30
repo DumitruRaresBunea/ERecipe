@@ -108,6 +108,7 @@ namespace ERecipe.Controllers
             if (recipe == null || authorsId.Count() <= 0 || categoriesId.Count() <= 0 || stepsId.Count() <= 0 || ingredientsId.Count() <= 0)
             {
                 ModelState.AddModelError("", "Missing recipe, author, category, step, ingredient or country");
+                return BadRequest();
             }
 
             foreach (var id in authorsId)
