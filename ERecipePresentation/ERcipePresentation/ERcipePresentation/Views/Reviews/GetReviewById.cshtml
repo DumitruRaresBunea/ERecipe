@@ -1,25 +1,55 @@
-﻿@model ERecipePresentation.DTO.ReviewDto
+﻿@model ERcipePresentation.ViewModel.ReviewReviewerRecipeViewModel
 @{
-    ViewData["Title"] = "GetIngredientById";
+    ViewData["Title"] = "GetReviewById";
 }
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <h4>@ViewBag.Message</h4>
 <div>
-    <h1>Review Details</h1>
+    <h2>Review Details for @Model.Recipe.Name</h2>
     <br />
     <div>
         <p>
-        <p> <strong>Review  Headline: </strong>@Model.Headline</p>
-        <p> <strong>Rating: </strong>@Model.Rating</p>
-        <p> <strong>Text: </strong>@Model.ReviewText</p>
+            <strong>Reviewer  Name: </strong> <span>
+                @Model.Reviewer.FirstName @Model.Reviewer.LastName
 
+                <a asp-controller="Reviewers" asp-action="GetReviewerById"
+                   asp-route-reviewerId="@Model.Reviewer.Id">| Reviewer Details |</a>
+                <a asp-controller="Reviewers" asp-action="DeleteReviewer"
+                   asp-route-reviewerId="@Model.Reviewer.Id">Delete Reviewer</a>
+            </span>
         </p>
-        <div class="form-group text-left">
-            <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="UpdateReview"
-               asp-route-reviewId="@Model.Id">Update Review</a>
-            <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="DeleteReview"
-               asp-route-reviewId="@Model.Id">Delete Review</a>
-        </div>
+
+        <p>
+            <strong>Recipe  Name: </strong> <span>
+                @Model.Recipe.Name
+
+                <a asp-controller="Recipes" asp-action="GetRecipeById"
+                   asp-route-recipeId="@Model.Recipe.Id">| Reviewer Details |</a>
+                <a asp-controller="Recipes" asp-action="DeleteReviewer"
+                   asp-route-recipeId="@Model.Recipe.Id">Delete Recipe</a>
+            </span>
+        </p>
+
+        <p>
+            <strong>Review Headline: </strong>
+            <span>@Model.Review.Headline</span>
+        </p>
+
+        <p>
+            <strong>Rating: </strong>
+            <span>@Model.Review.Rating</span>
+        </p>
+        <p>
+            <strong>Review text: </strong>
+            <span>@Model.Review.ReviewText</span>
+        </p>
+    </div><br /><br />
+    </p>
+    <div class="form-group text-left">
+        <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="UpdateReview"
+           asp-route-reviewId="@Model.Review.Id">Update Review</a>
+        <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="DeleteReview"
+           asp-route-reviewId="@Model.Review.Id">Delete Review</a>
     </div>
 </div>

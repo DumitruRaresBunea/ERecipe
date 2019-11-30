@@ -12,11 +12,10 @@
     @foreach (var item in Model)
     {
         <p>
-       <strong>@item.Headline</strong> Rating: 
-       <strong>@item.Rating</strong>
+            <strong>@item.Headline</strong> Rating:
 
-        <a asp-controller="Reviews" asp-action="GetReviewById" asp-route-reviewId="@item.Id"> | Details</a>
-        <a asp-controller="Reviews" asp-action="DeleteReview" asp-route-reviewId="@item.Id"> | Delete Reviews</a>
+            <a asp-controller="Reviews" asp-action="GetReviewById" asp-route-reviewId="@item.Id"> | Details</a>
+            <a asp-controller="Reviews" asp-action="DeleteReview" asp-route-reviewId="@item.Id"> | Delete Reviews</a>
         </p>
     }
 </div>
