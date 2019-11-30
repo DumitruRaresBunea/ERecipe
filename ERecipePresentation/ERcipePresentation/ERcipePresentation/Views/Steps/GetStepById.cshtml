@@ -1,0 +1,23 @@
+﻿@model ERecipePresentation.DTO.StepDto
+@{
+    ViewData["Title"] = "GetStepById";
+}
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<h4>@ViewBag.Message</h4>
+<div>
+    <h1>Step Details</h1>
+    <br />
+    <div>
+        <p>
+       <strong>Step Description: </strong>@Model.Description
+ 
+        </p>
+        <div class="form-group text-left">
+            <a class="btn btn-sm btn-primary" asp-controller="Steps" asp-action="UpdateStep"
+               asp-route-stepId="@Model.Id">Update Step</a>
+            <a class="btn btn-sm btn-primary" asp-controller="Steps" asp-action="DeleteStep"
+               asp-route-stepId="@Model.Id">Delete Step</a>
+        </div>
+    </div>
+</div>

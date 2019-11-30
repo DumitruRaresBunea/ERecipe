@@ -40,7 +40,7 @@ namespace ERcipePresentation.Repositories
             {
                 client.BaseAddress = new Uri("http://localhost:49951/api/");
 
-                var response = client.GetAsync($"step/{stepId}");
+                var response = client.GetAsync($"steps/{stepId}");
                 response.Wait();
 
                 var result = response.Result;

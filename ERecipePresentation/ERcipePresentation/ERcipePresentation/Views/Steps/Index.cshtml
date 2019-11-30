@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ERecipePresentation.DTO.StepDto>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@ViewBag.Message</h2>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<h2 class="text-success">@ViewBag.SuccessMessage</h2>
+<div>
+    <h2>List Of Steps</h2>
+    <br />
+    @foreach (var item in Model)
+    {
+        <p>
+            <strong>@item.Description</strong><br/>
+            <a asp-controller="Steps" asp-action="GetStepById" asp-route-stepId="@item.Id"> | Details</a>
+            <a asp-controller="Steps" asp-action="DeleteStep" asp-route-stepId="@item.Id"> | Delete Step</a>
+        </p>
+    }
+</div>
+

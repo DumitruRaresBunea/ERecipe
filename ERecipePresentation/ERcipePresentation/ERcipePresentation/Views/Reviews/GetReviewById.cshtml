@@ -1,0 +1,25 @@
+﻿@model ERecipePresentation.DTO.ReviewDto
+@{
+    ViewData["Title"] = "GetIngredientById";
+}
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<h4>@ViewBag.Message</h4>
+<div>
+    <h1>Review Details</h1>
+    <br />
+    <div>
+        <p>
+        <p> <strong>Review  Headline: </strong>@Model.Headline</p>
+        <p> <strong>Rating: </strong>@Model.Rating</p>
+        <p> <strong>Text: </strong>@Model.ReviewText</p>
+
+        </p>
+        <div class="form-group text-left">
+            <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="UpdateReview"
+               asp-route-reviewId="@Model.Id">Update Review</a>
+            <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="DeleteReview"
+               asp-route-reviewId="@Model.Id">Delete Review</a>
+        </div>
+    </div>
+</div>
