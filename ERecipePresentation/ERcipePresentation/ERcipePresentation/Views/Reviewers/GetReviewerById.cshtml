@@ -1,6 +1,6 @@
-﻿@model ERecipePresentation.DTO.ReviewerDto
+﻿@model ERcipePresentation.ViewModel.ReviewerReviewsRecipeViewModel
 @{
-    ViewData["Title"] = "GetIngredientById";
+    ViewData["Title"] = "GetReviewerById";
 }
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -10,14 +10,44 @@
     <br />
     <div>
         <p>
-        <p> <strong>Reviewer First Name: </strong>@Model.FirstName</p>
-        <p> <strong>Reviewer Last Name: </strong>@Model.LastName</p>
+            <strong>Reviewer  Name: </strong>@Model.Reviewer.FirstName @Model.Reviewer.LastName
         </p>
         <div class="form-group text-left">
             <a class="btn btn-sm btn-primary" asp-controller="Reviewers" asp-action="UpdateReviewer"
-               asp-route-reviewerId="@Model.Id">Update Ingredient</a>
+               asp-route-reviewerId="@Model.Reviewer.Id">Update Category</a>
             <a class="btn btn-sm btn-primary" asp-controller="Reviewers" asp-action="DeleteReviewer"
-               asp-route-reviewerId="@Model.Id">Delete Ingredient</a>
+               asp-route-reviewerId="@Model.Reviewer.Id">Delete Category</a>
         </div>
+    </div><br /><br />
+    <div>
+        <h4>@ViewBag.ReviewMessage</h4>
+        @foreach (var item in Model.ReviewRecipe)
+        {
+    <div>
+        <p>
+            <strong>Name:</strong>
+            <span>@item.Value.Name</span>
+            <a asp-controller="Home" asp-action="GetBookById"
+               asp-route-bookId="@item.Value.Id">Recipe Details</a>
+        </p>
+
+        <p>
+            <strong>Headling:</strong>
+            <span>@item.Key.Headline</span>
+            <a asp-controller="Reviews" asp-action="GetReviewById"
+               asp-route-reviewId="@item.Key.Id">Review Details</a>
+        </p>
+
+        <p>
+            <strong>Rating:</strong>
+            <span>@item.Key.Rating</span>
+        </p>
+
+        <p>
+            <strong>Review:</strong>
+            <span>@item.Key.ReviewText</span>
+        </p>
+    </div><br/><br />
+        }
     </div>
 </div>

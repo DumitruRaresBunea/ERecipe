@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ERcipePresentation.Repositories;
+using ERcipePresentation.ViewModel;
 using ERecipePresentation.DTO;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,6 +33,7 @@ namespace ERcipePresentation.Controllers
         public IActionResult GetCategoryById(int categoryId)
         {
             var category = _categoryRepostiory.GetCategory(categoryId);
+
             if (category == null)
             {
                 ModelState.AddModelError("", "Error getting a category");
@@ -39,7 +41,21 @@ namespace ERcipePresentation.Controllers
                     $"from the database or no category with that id exists";
                 category = new CategoryDto();
             }
-            return View(category);
+
+            var recipes = _categoryRepostiory.GetRecipesOfCategory(categoryId);
+
+            if(recipes.Count()<=0)
+            {
+                ViewBag.RecipeMessage = $"{category.Name} category does not have any recipes";
+            }
+
+            var recipeCategoryViewModel = new CategoriesRecipesViewModel()
+            {
+                Category = category,
+                Recipes = recipes
+            };
+
+            return View(recipeCategoryViewModel);
         }
     }
 }
