@@ -1,10 +1,9 @@
-﻿using System;
+﻿using ERecipePresentation.DTO;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using ERcipePresentation.Repositories;
-using ERecipePresentation.DTO;
 
-namespace ERecipe.Repositories
+namespace ERcipePresentation.Repositories
 {
     public class ReviewerRepository : IReviewerRepository
     {

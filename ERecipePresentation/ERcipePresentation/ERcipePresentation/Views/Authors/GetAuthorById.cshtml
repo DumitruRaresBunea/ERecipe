@@ -1,0 +1,25 @@
+﻿@model ERecipePresentation.DTO.AuthorDto
+@{
+    ViewData["Title"] = "GetCategoryById";
+}
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<h4>@ViewBag.Message</h4>
+<div>
+    <h1>Author Details</h1>
+    <br />
+    <div>
+        <p>
+        <p> <strong>Author First Name: </strong>@Model.FirstName</p>
+        <p> <strong>Author Last Name: </strong>@Model.LastName</p>
+        <p> <strong>Author Email: </strong>@Model.Email</p>
+        <p> <strong>Author Phone Number: </strong>@Model.PhoneNumber</p>
+        </p>
+        <div class="form-group text-left">
+            <a class="btn btn-sm btn-primary" asp-controller="Authors" asp-action="UpdateAuthor"
+               asp-route-authorId="@Model.Id">Update Author</a>
+            <a class="btn btn-sm btn-primary" asp-controller="Authors" asp-action="DeleteAuthor"
+               asp-route-authorId="@Model.Id">Delete Author</a>
+        </div>
+    </div>
+</div>

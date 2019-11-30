@@ -1,0 +1,24 @@
+﻿@model ERecipePresentation.DTO.RecipeDto
+@{
+    ViewData["Title"] = "GetRecipeById";
+}
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<h4>@ViewBag.Message</h4>
+<div>
+    <h1>Recipe Details</h1>
+    <br />
+    <div>
+        <p>
+        <p> <strong>Recipe Name: </strong>@Model.Name</p>
+        <p> <strong>Recipe Description: </strong>@Model.Description</p>
+        <p> <strong>Recipe Publish Date: </strong>@Model.PublishDate</p>
+        </p>
+        <div class="form-group text-left">
+            <a class="btn btn-sm btn-primary" asp-controller="Recipes" asp-action="UpdateRecipe"
+               asp-route-authorId="@Model.Id">Update Recipe</a>
+            <a class="btn btn-sm btn-primary" asp-controller="Recipes" asp-action="DeleteRecipe"
+               asp-route-authorId="@Model.Id">Delete Recipe</a>
+        </div>
+    </div>
+</div>

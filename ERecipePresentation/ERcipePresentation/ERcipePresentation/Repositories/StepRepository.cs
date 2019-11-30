@@ -1,10 +1,9 @@
-﻿using System;
+﻿using ERecipePresentation.DTO;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using ERcipePresentation.Repositories;
-using ERecipePresentation.DTO;
 
-namespace ERecipe.Repositories
+namespace ERcipePresentation.Repositories
 {
     public class StepRepository : IStepRepository
     {
@@ -58,7 +57,7 @@ namespace ERecipe.Repositories
             return step;
         }
 
-            public IEnumerable<StepDto> GetSteps()
+        public IEnumerable<StepDto> GetSteps()
         {
             IEnumerable<StepDto> steps = new List<StepDto>();
 
