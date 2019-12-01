@@ -90,7 +90,7 @@ namespace ERcipePresentation.Repositories
             {
                 client.BaseAddress = new Uri("http://localhost:49951/api/");
 
-                var response = client.GetAsync($"categories/recipes/{recipeId}");
+                var response = client.GetAsync($"steps/recipes/{recipeId}");
                 response.Wait();
 
                 var result = response.Result;
