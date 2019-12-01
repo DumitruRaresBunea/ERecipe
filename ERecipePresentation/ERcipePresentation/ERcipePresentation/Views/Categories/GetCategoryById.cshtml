@@ -15,20 +15,20 @@
         <div class="form-group text-left">
             <a class="btn btn-sm btn-primary" asp-controller="Categories" asp-action="UpdateCategory"
                asp-route-categoryId="@Model.Category.Id">Update Category</a>
-            <a class="btn btn-sm btn-primary" asp-controller="Categories" asp-action="DeleteCategory"
+            <a class="btn btn-sm btn-danger" asp-controller="Categories" asp-action="DeleteCategory"
                asp-route-categoryId="@Model.Category.Id">Delete Category</a>
         </div>
     </div><br /><br />
     <div>
-        <h4>@ViewBag.BookMessage</h4>
+        <h4>@ViewBag.RecipeMessage</h4>
     @foreach(var item in Model.Recipes)
     {
         <div>
             <p>
                 <strong>Name:</strong>
                 <span>@item.Name</span>
-                <a  asp-controller="Home" asp-action="GetBookById"
-                   asp-route-bookId="@item.Id">Recipe Details</a>
+                <a  asp-controller="Home" asp-action="GetRecipeById"
+                   asp-route-recipeId="@item.Id">Recipe Details</a>
 
             </p>
         </div>

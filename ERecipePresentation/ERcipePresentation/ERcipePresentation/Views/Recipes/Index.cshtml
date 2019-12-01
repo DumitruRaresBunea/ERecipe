@@ -13,8 +13,8 @@
     {
         <p>
             <strong>@item.Name</strong>
-            <a asp-controller="Recipes" asp-action="GetRecipeById" asp-route-recipeId="@item.Id"> | Details</a>
-            <a asp-controller="Recipes" asp-action="DeleteRecipe" asp-route-recipeId="@item.Id"> | Delete Recipe</a>
+            <a asp-controller="Home" asp-action="GetRecipeById" asp-route-recipeId="@item.Id"> | Details</a>
+            <a asp-controller="Home" asp-action="DeleteRecipe" asp-route-recipeId="@item.Id"> | Delete Recipe</a>
         </p>
     }
 </div>

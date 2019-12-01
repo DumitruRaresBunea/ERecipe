@@ -1,6 +1,6 @@
-﻿@model ERecipePresentation.DTO.AuthorDto
+﻿@model ERcipePresentation.ViewModel.AuthorRecipeCategoriesViewModel
 @{
-    ViewData["Title"] = "GetCategoryById";
+    ViewData["Title"] = "GetAuthorById";
 }
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -10,16 +10,43 @@
     <br />
     <div>
         <p>
-        <p> <strong>Author First Name: </strong>@Model.FirstName</p>
-        <p> <strong>Author Last Name: </strong>@Model.LastName</p>
-        <p> <strong>Author Email: </strong>@Model.Email</p>
-        <p> <strong>Author Phone Number: </strong>@Model.PhoneNumber</p>
+        <p> <strong>Author Name: </strong>@Model.Author.FirstName @Model.Author.LastName</p>
+        <p> <strong>Author Email: </strong>@Model.Author.Email</p>
+        <p> <strong>Author Phone Number: </strong>@Model.Author.PhoneNumber</p>
         </p>
         <div class="form-group text-left">
             <a class="btn btn-sm btn-primary" asp-controller="Authors" asp-action="UpdateAuthor"
-               asp-route-authorId="@Model.Id">Update Author</a>
-            <a class="btn btn-sm btn-primary" asp-controller="Authors" asp-action="DeleteAuthor"
-               asp-route-authorId="@Model.Id">Delete Author</a>
+               asp-route-authorId="@Model.Author.Id">Update Author</a>
+            <a class="btn btn-sm btn-danger" asp-controller="Authors" asp-action="DeleteAuthor"
+               asp-route-authorId="@Model.Author.Id">Delete Author</a>
         </div>
     </div>
-</div>
+    <br /><br />
+    <div>
+        <h4>@ViewBag.Message</h4>
+        @foreach (var item in Model.RecipeCategories)
+        {
+            <div>
+                <p>
+                    <strong>Name:</strong>
+                    <span>@item.Key.Name</span>
+                    <a asp-controller="Home" asp-action="GetRecipeById"
+                       asp-route-recipeId="@item.Key.Id">Recipe Details</a>
+                </p>
+
+                <table>
+                    <tr>
+                        <th style="float:left;margin-right:15px">Category:</th>
+                        @foreach (var category in item.Value)
+                        {
+                            <td style="float:left;margin-right:15px">
+                                @category.Name
+                                <a asp-controller="Categories" asp-action="GetCategoryById"
+                                   asp-route-categoryId="@category.Id">Category Details</a>
+                            </td>
+                        }
+                    </tr>
+                </table>
+            </div><br /><br />
+        }
+    </div>

@@ -15,7 +15,7 @@
         <div class="form-group text-left">
             <a class="btn btn-sm btn-primary" asp-controller="Reviewers" asp-action="UpdateReviewer"
                asp-route-reviewerId="@Model.Reviewer.Id">Update Category</a>
-            <a class="btn btn-sm btn-primary" asp-controller="Reviewers" asp-action="DeleteReviewer"
+            <a class="btn btn-sm btn-danger" asp-controller="Reviewers" asp-action="DeleteReviewer"
                asp-route-reviewerId="@Model.Reviewer.Id">Delete Category</a>
         </div>
     </div><br /><br />
@@ -27,8 +27,8 @@
         <p>
             <strong>Name:</strong>
             <span>@item.Value.Name</span>
-            <a asp-controller="Home" asp-action="GetBookById"
-               asp-route-bookId="@item.Value.Id">Recipe Details</a>
+            <a asp-controller="Home" asp-action="GetRecipeById"
+               asp-route-recipeId="@item.Value.Id">Recipe Details</a>
         </p>
 
         <p>

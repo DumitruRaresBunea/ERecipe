@@ -84,7 +84,7 @@ namespace ERcipePresentation.Repositories
 
         public IEnumerable<RecipeDto> GetRecipesOfAAuthor(int authorId)
         {
-            IEnumerable<RecipeDto> books = new List<RecipeDto>();
+            IEnumerable<RecipeDto> recipes = new List<RecipeDto>();
 
             using (var client = new HttpClient())
             {
@@ -100,11 +100,11 @@ namespace ERcipePresentation.Repositories
                     var readTask = result.Content.ReadAsAsync<IList<RecipeDto>>();
                     readTask.Wait();
 
-                    books = readTask.Result;
+                    recipes = readTask.Result;
                 }
             }
 
-            return books;
+            return recipes;
         }
     }
 }

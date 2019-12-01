@@ -1,0 +1,127 @@
+﻿@model ERcipePresentation.ViewModel.CompleteRecipeViewModel
+@{
+    ViewData["Title"] = "GetRecipeById";
+}
+<div asp-validation-summary="ModelOnly" class="text-danged"></div>
+<h4>@ViewBag.ViewMessage</h4>
+<div>
+    <h2>Recipe Details</h2>
+    <br />
+    <table>
+        <tr>
+            <th>Name: </th>
+            <td>@Model.Recipe.Name</td>
+        </tr>
+        <tr>
+            <th>Country: </th>
+            <td>@Model.Country.Name</td>
+        </tr>
+        <tr>
+            <th>Date Published: </th>
+            <td>@String.Format("{0:MMM yyyy}", Model.Recipe.PublishDate)</td>
+        </tr>
+        <tr>
+            <th>Rating: </th>
+            @if (Model.Rating > 0)
+            {
+                <td>@String.Format("{0:0.##}", Model.Rating) Stars</td>
+            }
+            else
+            {
+                <td>No rating yet</td>
+            }
+        </tr>
+        <tr>
+            <th>Authors: </th>
+            <td>
+                @foreach (var author in Model.Authors)
+                {
+                    @author.FirstName @author.LastName <a asp-controller="Authors" asp-action="GetAuthorById"
+                                                          asp-route-authorId="@author.Id">View</a><br />
+                }
+            </td>
+        </tr>
+        <tr>
+            <th>Categories: </th>
+            <td>
+                @{
+                    foreach (var category in Model.Categories)
+                    {
+                        @category.Name <a asp-controller="Categories" asp-action="GetCategoryById"
+                                          asp-route-categoryId="@category.Id">View</a><br />
+                    }
+                }
+            </td>
+        </tr>
+        <tr>
+            <th>Ingredients: </th>
+            <td>
+                @{
+                    foreach (var ingredient in Model.Ingredients)
+                    {
+                        @ingredient.Quantity @ingredient.Name
+                        <a asp-controller="Ingredients" asp-action="GetIngredientById"
+                           asp-route-ingredientId="@ingredient.Id">View</a><br />
+                    }
+                }
+            </td>
+        </tr>
+        <tr>
+            <th>Steps: </th>
+            <td>
+                @{
+                    foreach (var step in Model.Steps)
+                    {
+                        @step.Description
+                        <a asp-controller="Steps" asp-action="GetStepById"
+                           asp-route-stepId="@step.Id"> View Details</a><br />
+                    }
+                }
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div class="form-group text-left">
+        <a class="btn btn-sm btn-primary" asp-controller="Home" asp-action="UpdateRecipe"
+           asp-route-recipeId="@Model.Recipe.Id">Update Recipe</a>
+        <a class="btn btn-sm btn-danger" asp-controller="Home" asp-action="DeleteRecipe"
+           asp-route-recipeId="@Model.Recipe.Id">Delete Recipe</a>
+    </div>
+    <br /><br />
+    @foreach (var item in Model.ReviewsReviewer)
+    {
+<div>
+    <p>
+        <strong>Headline: </strong>
+        <span>
+            @item.Key.Headline
+            <a class="btn btn-sm btn-danger" asp-controller="Reviews" asp-action="GetReviewById"
+               asp-route-reviewId="@item.Key.Id"> View Details</a>
+        </span>
+    </p>
+
+    <p>
+        <strong>Reviewer: </strong>
+        <span>
+            @item.Value.FirstName @item.Value.LastName
+            <a class="btn btn-sm btn-danger" asp-controller="Reviewers" asp-action="GetReviewerById"
+               asp-route-reviewerId="@item.Value.Id"> View Details</a>
+        </span>
+    </p>
+
+    <p>
+        <strong>Rating: </strong>
+        <span>
+            @item.Key.Rating
+        </span>
+    </p>
+
+    <p>
+        <strong>Review Text:</strong>
+        <span>
+            @item.Key.ReviewText
+        </span>
+    </p>
+</div>
+    }
+</div>

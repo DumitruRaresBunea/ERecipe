@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ERcipePresentation.Repositories;
+using ERcipePresentation.ViewModel;
 using ERecipePresentation.DTO;
 using Microsoft.AspNetCore.Mvc;
 
@@ -42,7 +43,22 @@ namespace ERcipePresentation.Controllers
                     $"from the database or no country with that id exists";
                 country = new CountryDTO();
             }
-            return View(country);
+
+            var recipes = _countryRepository.GetRecipesFromCountry(countryId);
+
+            if(recipes.Count()<= 0)
+            {
+                ViewBag.Message = $"There are no recipes from country {country.Name}";
+
+            }
+
+            var countryRecipesViewModel = new CountryRecipesViewModels
+            {
+                Country = country,
+                Recipes = recipes
+            };
+
+            return View(countryRecipesViewModel);
         }
 
        

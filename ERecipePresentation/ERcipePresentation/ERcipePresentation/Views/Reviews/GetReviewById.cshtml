@@ -24,9 +24,9 @@
             <strong>Recipe  Name: </strong> <span>
                 @Model.Recipe.Name
 
-                <a asp-controller="Recipes" asp-action="GetRecipeById"
+                <a asp-controller="Home" asp-action="GetRecipeById"
                    asp-route-recipeId="@Model.Recipe.Id">| Reviewer Details |</a>
-                <a asp-controller="Recipes" asp-action="DeleteReviewer"
+                <a asp-controller="Home" asp-action="DeleteReviewer"
                    asp-route-recipeId="@Model.Recipe.Id">Delete Recipe</a>
             </span>
         </p>
@@ -49,7 +49,7 @@
     <div class="form-group text-left">
         <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="UpdateReview"
            asp-route-reviewId="@Model.Review.Id">Update Review</a>
-        <a class="btn btn-sm btn-primary" asp-controller="Reviews" asp-action="DeleteReview"
+        <a class="btn btn-sm btn-danger" asp-controller="Reviews" asp-action="DeleteReview"
            asp-route-reviewId="@Model.Review.Id">Delete Review</a>
     </div>
 </div>
