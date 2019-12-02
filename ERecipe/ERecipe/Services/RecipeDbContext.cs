@@ -34,7 +34,6 @@ namespace ERecipe.Services
                 .HasOne(c => c.Category)
                 .WithMany(rc => rc.RecipeCategories)
                 .HasForeignKey(c => c.CategoryId);
-
             modelBuilder.Entity<RecipeAuthor>()
                .HasKey(ra => new { ra.RecipeId, ra.AuthorID });
             modelBuilder.Entity<RecipeAuthor>()
@@ -45,7 +44,6 @@ namespace ERecipe.Services
                 .HasOne(a => a.Author)
                 .WithMany(ra => ra.RecipeAuthors)
                 .HasForeignKey(a => a.AuthorID);
-
             modelBuilder.Entity<RecipeIngredient>()
                .HasKey(ri => new { ri.RecipeId, ri.IngredientId });
             modelBuilder.Entity<RecipeIngredient>()

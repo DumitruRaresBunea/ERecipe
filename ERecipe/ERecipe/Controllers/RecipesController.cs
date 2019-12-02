@@ -88,7 +88,7 @@ namespace ERecipe.Controllers
         [ProducesResponseType(200, Type = typeof(decimal))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult GetRecipeId(int recipeId)
+        public IActionResult GetRecipeRatingAverage(int recipeId)
         {
             if (!_recipeRepository.RecipeExists(recipeId))
                 return NotFound();

@@ -195,7 +195,6 @@ namespace ERecipe.Controllers
         //api/countries/countryId
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        [ProducesResponseType(422)]
         [ProducesResponseType(409)]
         [ProducesResponseType(500)]
         [ProducesResponseType(404)]
