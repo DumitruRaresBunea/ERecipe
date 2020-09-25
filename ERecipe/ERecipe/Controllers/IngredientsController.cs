@@ -12,8 +12,8 @@ namespace ERecipe.Controllers
     [ApiController]
     public class IngredientsController : Controller
     {
-        private IIngredientRepository _ingredientRepository;
-        private IRecipeRepository _recipeRepository;
+        private readonly IIngredientRepository _ingredientRepository;
+        private readonly IRecipeRepository _recipeRepository;
 
         public IngredientsController(IIngredientRepository ingredientRepository, IRecipeRepository recipeRepository)
         {

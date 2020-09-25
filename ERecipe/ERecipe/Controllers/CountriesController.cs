@@ -12,8 +12,8 @@ namespace ERecipe.Controllers
     [ApiController]
     public class CountriesController : Controller
     {
-        private ICountryRepository _countryRepository;
-        private IRecipeRepository _recipeRepository;
+        private readonly ICountryRepository _countryRepository;
+        private readonly IRecipeRepository _recipeRepository;
 
         public CountriesController(ICountryRepository countryRepository, IRecipeRepository recipeRepository)
         {

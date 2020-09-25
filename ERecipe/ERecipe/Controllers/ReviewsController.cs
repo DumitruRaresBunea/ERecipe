@@ -12,9 +12,9 @@ namespace ERecipe.Controllers
     [ApiController]
     public class ReviewsController : Controller
     {
-        private IReviewRepository _reviewRepository;
-        private IRecipeRepository _recipeRepository;
-        private IReviewerRepository _reviewerRepository;
+        private readonly IReviewRepository _reviewRepository;
+        private readonly IRecipeRepository _recipeRepository;
+        private readonly IReviewerRepository _reviewerRepository;
 
         public ReviewsController(IReviewRepository reviewRepository, IRecipeRepository recipeRepository, IReviewerRepository reviewerRepository)
         {

@@ -13,13 +13,13 @@ namespace ERecipe.Controllers
     [ApiController]
     public class RecipesController : Controller
     {
-        private IRecipeRepository _recipeRepository;
-        private IAuthorRepository _authorRepository;
-        private ICategoryRepository _categoryRepository;
-        private IReviewRepository _reviewRepository;
-        private IStepRepository _stepRepository;
-        private IIngredientRepository _ingredientRepository;
-        private ICountryRepository _countryRepository;
+        private readonly IRecipeRepository _recipeRepository;
+        private readonly IAuthorRepository _authorRepository;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IReviewRepository _reviewRepository;
+        private readonly IStepRepository _stepRepository;
+        private readonly IIngredientRepository _ingredientRepository;
+        private readonly ICountryRepository _countryRepository;
 
         public RecipesController(IRecipeRepository recipeRepository, IAuthorRepository authorRepository, ICategoryRepository categoryRepository
             , IReviewRepository reviewRepository, IStepRepository stepRepository, IIngredientRepository ingredientRepository, ICountryRepository countryRepository)

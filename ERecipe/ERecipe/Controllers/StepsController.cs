@@ -12,8 +12,8 @@ namespace ERecipe.Controllers
     [ApiController]
     public class StepsController : Controller
     {
-        private IStepRepository _stepRepository;
-        private IRecipeRepository _recipeRepository;
+        private readonly IStepRepository _stepRepository;
+        private readonly IRecipeRepository _recipeRepository;
 
         public StepsController(IStepRepository stepRepository, IRecipeRepository recipeRepository)
         {

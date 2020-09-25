@@ -12,8 +12,8 @@ namespace ERecipe.Controllers
     [ApiController]
     public class ReviewersController : Controller
     {
-        private IReviewerRepository _reviewerRepository;
-        private IReviewRepository _reviewRepository;
+        private readonly IReviewerRepository _reviewerRepository;
+        private readonly IReviewRepository _reviewRepository;
 
         public ReviewersController(IReviewerRepository reviewerRepository, IReviewRepository reviewRepository)
         {

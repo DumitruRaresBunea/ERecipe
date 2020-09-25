@@ -11,8 +11,8 @@ namespace ERecipe.Controllers
     [ApiController]
     public class AuthorsController : Controller
     {
-        private IAuthorRepository _authorRepository;
-        private IRecipeRepository _recipeRepository;
+        private readonly IAuthorRepository _authorRepository;
+        private readonly IRecipeRepository _recipeRepository;
 
         public AuthorsController(IAuthorRepository authorsRepository, IRecipeRepository recipeRepository)
         {

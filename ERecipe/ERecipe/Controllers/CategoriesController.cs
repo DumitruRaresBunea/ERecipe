@@ -12,8 +12,8 @@ namespace ERecipe.Controllers
     [ApiController]
     public class CategoriesController : Controller
     {
-        private ICategoryRepository _categoryRepository;
-        private IRecipeRepository _recipeRepository;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IRecipeRepository _recipeRepository;
 
         public CategoriesController(ICategoryRepository categoryRepository, IRecipeRepository recipeRepository)
         {
