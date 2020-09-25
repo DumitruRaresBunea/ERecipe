@@ -1,5 +1,5 @@
-﻿using ERecipe.Models;
-using ERecipe.Services;
+﻿using ERecipe.DataContext;
+using ERecipe.DataContext.Models;
 using System.Collections.Generic;
 
 namespace ERecipe

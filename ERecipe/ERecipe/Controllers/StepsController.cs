@@ -1,11 +1,10 @@
-﻿using System;
+﻿using ERecipe.DataContext.Models;
+using ERecipe.DTO;
+using ERecipe.Services.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using ERecipe.DTO;
-using ERecipe.Models;
-using ERecipe.Repositories;
-using Microsoft.AspNetCore.Mvc;
+
 
 namespace ERecipe.Controllers
 {

@@ -1,5 +1,5 @@
-using ERecipe.Repositories;
-using ERecipe.Services;
+using ERecipe.DataContext;
+using ERecipe.Services.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -23,9 +23,8 @@ namespace ERecipe
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers()
-                .AddNewtonsoftJson( o=>o.SerializerSettings.ReferenceLoopHandling 
-                = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-                
+                .AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling
+               = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             var connectionString = Configuration["connectionStrings:recipeDbConnectionString"];
             services.AddDbContext<RecipeDbContext>(c => c.UseSqlServer(connectionString));
@@ -38,7 +37,6 @@ namespace ERecipe
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<IStepRepository, StepRepository>();
             services.AddScoped<IRecipeRepository, RecipeRepository>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +50,6 @@ namespace ERecipe
             app.UseRouting();
 
             context.Database.Migrate();
-
 
             //This adds data to the database
             //context.SeedDataContext();

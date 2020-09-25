@@ -1,6 +1,6 @@
-﻿using ERecipe.DTO;
-using ERecipe.Models;
-using ERecipe.Repositories;
+﻿using ERecipe.DataContext.Models;
+using ERecipe.DTO;
+using ERecipe.Services.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +47,7 @@ namespace ERecipe.Controllers
         }
 
         //api/authors/authorId
-        [HttpGet("{authorId}" , Name = "GetAuthor")]
+        [HttpGet("{authorId}", Name = "GetAuthor")]
         [ProducesResponseType(200, Type = typeof(AuthorDto))]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
