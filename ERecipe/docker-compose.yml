@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  erecipe:
+    image: ${DOCKER_REGISTRY-}erecipe
+    build:
+      context: .
+      dockerfile: ERecipe/Dockerfile
+  sqldata:
+        image: mcr.microsoft.com/mssql/server:2017-latest
+        environment:
+            - SA_PASSWORD=Pass@word
+            - ACCEPT_EULA=Y
+        ports:
+            - "5434:1433"
