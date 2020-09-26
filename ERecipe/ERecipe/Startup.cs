@@ -1,4 +1,5 @@
 using ERecipe.DataContext;
+using ERecipe.Helpers;
 using ERecipe.Services.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,14 +30,7 @@ namespace ERecipe
             var connectionString = Configuration["connectionStrings:recipeDbConnectionString"];
             services.AddDbContext<RecipeDbContext>(c => c.UseSqlServer(connectionString));
 
-            services.AddScoped<ICountryRepository, CountriesRepository>();
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<IAuthorRepository, AuthorRepository>();
-            services.AddScoped<IIngredientRepository, IngredientRepository>();
-            services.AddScoped<IReviewerRepository, ReviewerRepository>();
-            services.AddScoped<IReviewRepository, ReviewRepository>();
-            services.AddScoped<IStepRepository, StepRepository>();
-            services.AddScoped<IRecipeRepository, RecipeRepository>();
+            services.RegisterRepositories();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +46,7 @@ namespace ERecipe
             context.Database.Migrate();
 
             //This adds data to the database
-            //context.SeedDataContext();
+            context.SeedDataContext();
 
             app.UseEndpoints(endpoints =>
             {
