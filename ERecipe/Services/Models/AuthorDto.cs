@@ -1,4 +1,4 @@
-﻿namespace ERecipe.DTO
+﻿namespace ERecipe.Services.Models
 {
     public class AuthorDto
     {

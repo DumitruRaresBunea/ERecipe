@@ -7,7 +7,7 @@ namespace ERecipe.Services.Repositories
 {
     public class AuthorRepository : IAuthorRepository
     {
-        private RecipeDbContext _authorRepository;
+        private readonly RecipeDbContext _authorRepository;
 
         public AuthorRepository(RecipeDbContext authorRepository)
         {

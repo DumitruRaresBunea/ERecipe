@@ -1,5 +1,5 @@
 ﻿using ERecipe.DataContext.Models;
-using ERecipe.DTO;
+using ERecipe.Services.Models;
 using ERecipe.Services.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;

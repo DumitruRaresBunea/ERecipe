@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ERecipe.DTO
+namespace ERecipe.Services.Models
 {
     public class RecipeDto
     {
